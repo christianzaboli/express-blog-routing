@@ -51,12 +51,12 @@ const posts = [
 
 // index
 router.get('/', function (req, res) {
-  res.send('List of posts')
+  res.json(posts);
 })
 
 // show
 router.get('/:id', function (req, res) {
-  res.send('Post details ' + req.params.id)
+  res.json(posts[req.params.id - 1]);
 })
 
 // post
