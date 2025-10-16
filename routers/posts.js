@@ -56,7 +56,7 @@ router.get('/', function (req, res) {
 
 // show
 router.get('/:id', function (req, res) {
-  res.json(posts[req.params.id - 1]);
+  res.json(posts[req.params.id - 1] ?? 'Error');
 })
 
 // post
