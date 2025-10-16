@@ -49,8 +49,34 @@ const posts = [
   },
 ];
 
+// index
 router.get('/', function (req, res) {
-  res.send('Lista dei post')
+  res.send('List of posts')
+})
+
+// show
+router.get('/:id', function (req, res) {
+  res.send('Post details ' + req.params.id)
+})
+
+// post
+router.post('/', function (req, res) {
+  res.send('Create new post')
+})
+
+// update
+router.put('/:id', function (req, res) {
+  res.send('Overhaul mod of the post n.' + req.params.id)
+})
+
+// patch
+router.patch('/:id', function (req, res) {
+  res.send('Partial mod of the post n.' + req.params.id)
+})
+
+// delete
+router.delete('/:id', function (req, res) {
+  res.send('deSTROYINGGG post n.' + req.params.id)
 })
 
 module.exports = router;
